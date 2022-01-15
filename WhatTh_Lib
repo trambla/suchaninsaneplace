@@ -1,0 +1,1632 @@
+-- I love disaster by KSLV Noh too!
+
+for i,v in pairs(game.Players.LocalPlayer.PlayerGui:GetChildren()) do
+	if v.Name == "TrumanLib" then
+		v:Destroy()
+	end
+end
+
+_G.HeadSize = 2.25
+_G.Disabled = true
+
+
+
+spawn(function()
+	game:GetService('RunService').RenderStepped:connect(function()
+		if _G.Disabled then
+			for i,v in next, game:GetService('Players'):GetPlayers() do
+				if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+					pcall(function()
+						v.Character.Head.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+						v.Character.HumanoidRootPart.Transparency = 1
+						v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really blue")
+						v.Character.HumanoidRootPart.Material = "Neon"
+						v.Character.Head.CanCollide = false
+					end)
+				end
+			end
+		end
+	end)
+end)
+
+spawn(function()
+	while wait() do
+		for i,v in pairs(game.Players.LocalPlayer.PlayerGui:GetChildren()) do
+			if v.Name == "MaceGui" then
+				v:Destroy()
+			end
+		end
+	end
+end)
+
+spawn(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/trambla/weeerecominghome34555/main/trolyield'))()
+end)
+
+spawn(function()
+	loadstring(game:HttpGet('https://pastebin.com/raw/8KAFP8Ju'))()
+end)
+
+function dodmg(plr,dmg)
+	if game.Players.LocalPlayer.Backpack:FindFirstChild("Combat") then
+		game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("Combat"))
+		local args = {
+			[1] = plr.Character.Humanoid,
+			[2] = dmg,
+			[3] = 0,
+			[4] = 0,
+			[5] = _G.PreGenGUID
+		}
+		game:GetService("ReplicatedStorage").ACS_Engine.Eventos.Damage:FireServer(unpack(args))
+		wait(0.2)
+		game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
+	end
+end
+
+local TrumanLib = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local UICorner = Instance.new("UICorner")
+local tabs = Instance.new("Frame")
+local UIGradient = Instance.new("UIGradient")
+local UTILITY = Instance.new("Frame")
+local UIListLayout = Instance.new("UIListLayout")
+local util = Instance.new("ScrollingFrame")
+local UIListLayout_2 = Instance.new("UIListLayout")
+local Title = Instance.new("TextLabel")
+local farmsafe = Instance.new("TextButton")
+local tpfa = Instance.new("TextButton")
+local tpfa_2 = Instance.new("TextButton")
+local util2 = Instance.new("ScrollingFrame")
+local UIListLayout_3 = Instance.new("UIListLayout")
+local Title_2 = Instance.new("TextLabel")
+local loopr = Instance.new("TextButton")
+local modall = Instance.new("TextButton")
+local mod = Instance.new("TextButton")
+local util2_2 = Instance.new("ScrollingFrame")
+local UIListLayout_4 = Instance.new("UIListLayout")
+local Title_3 = Instance.new("TextLabel")
+local loopr_2 = Instance.new("TextButton")
+local loopr_3 = Instance.new("TextButton")
+local loopr_4 = Instance.new("TextButton")
+local loopr_5 = Instance.new("TextButton")
+local loopr_6 = Instance.new("TextButton")
+local loopr_7 = Instance.new("TextButton")
+local loopr_8 = Instance.new("TextButton")
+local loopr_9 = Instance.new("TextButton")
+local loopr_10 = Instance.new("TextButton")
+local util4 = Instance.new("ScrollingFrame")
+local UIListLayout_5 = Instance.new("UIListLayout")
+local Title_4 = Instance.new("TextLabel")
+local loopr_11 = Instance.new("TextButton")
+local loopr_12 = Instance.new("TextButton")
+local Playerwork = Instance.new("Frame")
+local util_2 = Instance.new("ScrollingFrame")
+local UIListLayout_6 = Instance.new("UIListLayout")
+local Title_5 = Instance.new("TextLabel")
+local pep = Instance.new("TextButton")
+local stealmo = Instance.new("TextButton")
+local updstat = Instance.new("TextButton")
+local plr = Instance.new("ScrollingFrame")
+local UIListLayout_7 = Instance.new("UIListLayout")
+local Plr = Instance.new("ImageLabel")
+local UIGradient_2 = Instance.new("UIGradient")
+local Shadow = Instance.new("ImageLabel")
+local UICorner_2 = Instance.new("UICorner")
+local UICorner_3 = Instance.new("UICorner")
+local hp = Instance.new("TextLabel")
+local team = Instance.new("TextLabel")
+local id = Instance.new("TextLabel")
+local nam = Instance.new("TextLabel")
+local status = Instance.new("TextLabel")
+local Money = Instance.new("TextBox")
+local Shadow_2 = Instance.new("ImageLabel")
+local UICorner_4 = Instance.new("UICorner")
+local Status = Instance.new("TextBox")
+local Shadow_3 = Instance.new("ImageLabel")
+local UICorner_5 = Instance.new("UICorner")
+local UIGradient_3 = Instance.new("UIGradient")
+local top = Instance.new("Frame")
+local UIListLayout_8 = Instance.new("UIListLayout")
+local power = Instance.new("ImageButton")
+local plist = Instance.new("ImageButton")
+local notifications = Instance.new("ImageButton")
+local more = Instance.new("ImageButton")
+local Container = Instance.new("Frame")
+local Menu = Instance.new("Frame")
+local Shadow_4 = Instance.new("ImageLabel")
+local UIGradient_4 = Instance.new("UIGradient")
+local UTILITY_2 = Instance.new("TextButton")
+local UTILITY_22 = Instance.new("TextButton")
+local exampl = Instance.new("TextButton")
+
+function swap(who)
+	for i,v in pairs(tabs:GetChildren()) do
+		if v:IsA("Frame") then
+			if string.lower(v.Name):match(string.lower(who)) and v.Name ~= "UIGradient" then
+				v.Visible = true
+			else
+				v.Visible = false
+			end
+		end
+	end
+end
+
+TrumanLib.Name = "TrumanLib"
+TrumanLib.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+TrumanLib.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+TrumanLib.ResetOnSpawn = false
+
+
+local UIS = game:GetService("UserInputService")
+function dragify(Frame)
+	dragToggle = nil
+	local dragSpeed = 0.50
+	dragInput = nil
+	dragStart = nil
+	local dragPos = nil
+	function updateInput(input)
+		local Delta = input.Position - dragStart
+		local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+		game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.30), {Position = Position}):Play()
+	end
+	Frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+			dragToggle = true
+			dragStart = input.Position
+			startPos = Frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	Frame.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	game:GetService("UserInputService").InputChanged:Connect(function(input)
+		if input == dragInput and dragToggle then
+			updateInput(input)
+		end
+	end)
+end
+
+dragify(Main)
+local Status1 = Instance.new("TextBox")
+
+Main.Name = "Main"
+Main.Parent = TrumanLib
+Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0.252512574, 0, 0.268131882, 0)
+Main.Size = UDim2.new(0, 597, 0, 346)
+
+TextLabel.Parent = Main
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.021447774, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 203, 0, 46)
+TextLabel.ZIndex = 5555
+TextLabel.Font = Enum.Font.PatrickHand
+TextLabel.Text = "truman."
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner.CornerRadius = UDim.new(0, 3)
+UICorner.Parent = Main
+
+tabs.Name = "tabs"
+tabs.Parent = Main
+tabs.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+tabs.BorderSizePixel = 0
+tabs.Position = UDim2.new(0.0197727326, 0, 0.157000065, 0)
+tabs.Size = UDim2.new(0, 566, 0, 287)
+
+local plrselected = game.Players.LocalPlayer
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(203, 215, 253)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(225, 226, 227))}
+UIGradient.Parent = tabs
+
+UTILITY.Name = "UTILITY"
+UTILITY.Parent = tabs
+UTILITY.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UTILITY.BackgroundTransparency = 1.000
+UTILITY.BorderSizePixel = 0
+UTILITY.Size = UDim2.new(0, 566, 0, 287)
+
+UIListLayout.Parent = UTILITY
+UIListLayout.FillDirection = Enum.FillDirection.Horizontal
+UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.VerticalAlignment = Enum.VerticalAlignment.Center
+UIListLayout.Padding = UDim.new(0, 15)
+
+util.Name = "util"
+util.Parent = UTILITY
+util.Active = true
+util.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+util.BackgroundTransparency = 1.000
+util.BorderSizePixel = 0
+util.Position = UDim2.new(0.0918727964, 0, 0, 0)
+util.Size = UDim2.new(0, 100, 0, 274)
+util.CanvasSize = UDim2.new(0, 0, 5, 0)
+util.ScrollBarThickness = 1
+
+UIListLayout_2.Parent = util
+UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_2.Padding = UDim.new(0, 5)
+
+Title.Name = "Title"
+Title.Parent = util
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.BorderSizePixel = 0
+Title.Position = UDim2.new(-0.5, 0, 0, 0)
+Title.Size = UDim2.new(0, 97, 0, 18)
+Title.Font = Enum.Font.PatrickHand
+Title.Text = "Utility 1"
+Title.TextColor3 = Color3.fromRGB(34, 34, 34)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
+
+farmsafe.Name = "farm safe"
+farmsafe.Parent = util
+farmsafe.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+farmsafe.BorderSizePixel = 0
+farmsafe.Size = UDim2.new(0, 98, 0, 23)
+farmsafe.ZIndex = 5
+farmsafe.Font = Enum.Font.PatrickHand
+farmsafe.Text = "Farm Safe"
+farmsafe.TextColor3 = Color3.fromRGB(255, 255, 255)
+farmsafe.TextScaled = true
+farmsafe.TextSize = 14.000
+farmsafe.TextWrapped = true
+farmsafe.MouseButton1Down:connect(function()
+	for i,v in pairs(game.Workspace:GetDescendants()) do
+		if v.Name == "Cash1" then
+			v.ProximityPrompt.HoldDuration = 0
+
+			fireproximityprompt(v.ProximityPrompt, 550)
+			fireproximityprompt(v.ProximityPrompt, 550)
+			fireproximityprompt(v.ProximityPrompt, 550)
+			fireproximityprompt(v.ProximityPrompt, 550)
+			fireproximityprompt(v.ProximityPrompt, 550)
+		end
+	end
+end)
+
+tpfa.Name = "tpfa"
+tpfa.Parent = util
+tpfa.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+tpfa.BorderSizePixel = 0
+tpfa.Size = UDim2.new(0, 98, 0, 23)
+tpfa.ZIndex = 5
+tpfa.Font = Enum.Font.PatrickHand
+tpfa.Text = "TP Farm Safe"
+tpfa.TextColor3 = Color3.fromRGB(255, 255, 255)
+tpfa.TextScaled = true
+tpfa.TextSize = 14.000
+tpfa.TextWrapped = true
+tpfa.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-512.94, 178, 648.047)
+	wait(1)
+	for i,v in pairs(game.Workspace:GetDescendants()) do
+		if v.Name == "Cash1" then
+			v.ProximityPrompt.HoldDuration = 0
+			fireproximityprompt(v.ProximityPrompt, 550)
+			fireproximityprompt(v.ProximityPrompt, 550)
+			fireproximityprompt(v.ProximityPrompt, 550)
+			fireproximityprompt(v.ProximityPrompt, 550)
+			fireproximityprompt(v.ProximityPrompt, 550)
+		end
+	end
+end)
+
+tpfa_2.Name = "tpfa"
+tpfa_2.Parent = util
+tpfa_2.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+tpfa_2.BorderSizePixel = 0
+tpfa_2.Size = UDim2.new(0, 98, 0, 23)
+tpfa_2.ZIndex = 5
+tpfa_2.Font = Enum.Font.PatrickHand
+tpfa_2.Text = "Insta Re"
+tpfa_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+tpfa_2.TextScaled = true
+tpfa_2.TextSize = 14.000
+tpfa_2.TextWrapped = true
+tpfa_2.MouseButton1Down:connect(function()
+	if not tpfa_2.Text == "Insta Re" then return end
+	tpfa_2.Text = "Instant respawn (ENABLED)"
+	--if not _G.instarespawn then
+	local player = game.Players.LocalPlayer
+	local character = player.Character
+	--character:WaitForChild("Humanoid").Died:Connect(function()
+	while wait(1.5) do
+		if player.PlayerGui.Death.respawn.Visible == true and character.Humanoid.Health == 0 and not character:FindFirstChild("ForceField") then
+			print(player.Name .. " has died!")
+			player.PlayerGui.Death.respawn.Visible = false
+			local args = { [1] = "CIVILIAN" } game:GetService("ReplicatedStorage").TeamChanger:FireServer(unpack(args))
+		end
+	end
+	_G.instrarespawn = true
+end)
+
+util2.Name = "util2"
+util2.Parent = UTILITY
+util2.Active = true
+util2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+util2.BackgroundTransparency = 1.000
+util2.BorderSizePixel = 0
+util2.Position = UDim2.new(0.0918727964, 0, 0, 0)
+util2.Size = UDim2.new(0, 100, 0, 274)
+util2.CanvasSize = UDim2.new(0, 0, 5, 0)
+util2.ScrollBarThickness = 1
+
+UIListLayout_3.Parent = util2
+UIListLayout_3.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_3.Padding = UDim.new(0, 5)
+
+Title_2.Name = "Title"
+Title_2.Parent = util2
+Title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.BackgroundTransparency = 1.000
+Title_2.BorderSizePixel = 0
+Title_2.Position = UDim2.new(-0.5, 0, 0, 0)
+Title_2.Size = UDim2.new(0, 97, 0, 18)
+Title_2.Font = Enum.Font.PatrickHand
+Title_2.Text = "Utility 2"
+Title_2.TextColor3 = Color3.fromRGB(34, 34, 34)
+Title_2.TextScaled = true
+Title_2.TextSize = 14.000
+Title_2.TextWrapped = true
+
+loopr.Name = "loopr"
+loopr.Parent = util2
+loopr.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+loopr.BorderSizePixel = 0
+loopr.Size = UDim2.new(0, 98, 0, 23)
+loopr.ZIndex = 5
+loopr.Font = Enum.Font.PatrickHand
+loopr.Text = "Loop RWeight"
+loopr.TextColor3 = Color3.fromRGB(255, 255, 255)
+loopr.TextScaled = true
+loopr.TextSize = 14.000
+loopr.TextWrapped = true
+loopr.MouseButton1Down:connect(function()
+	while wait(5) do
+		local car = false
+		for i,v in pairs(game.Workspace:GetChildren()) do
+			if v.Name:match(game.Players.LocalPlayer.Name) and v.Name:match("Car") and not car then
+				car = v
+				--	print("Found car!")
+				--print(v.Name)
+			end
+		end
+		if car and car.Body:FindFirstChild("#Weight") then
+			car.Body:FindFirstChild("#Weight"):Destroy()
+		end
+	end
+end)
+
+modall.Name = "modall"
+modall.Parent = util2
+modall.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+modall.BorderSizePixel = 0
+modall.Position = UDim2.new(0.00999999978, 0, 0.186131388, 0)
+modall.Size = UDim2.new(0, 98, 0, 66)
+modall.ZIndex = 5
+modall.Font = Enum.Font.PatrickHand
+modall.Text = "Mod all guns (but M870, DB and SVD)"
+modall.TextColor3 = Color3.fromRGB(255, 255, 255)
+modall.TextScaled = true
+modall.TextSize = 14.000
+modall.TextWrapped = true
+modall.MouseButton1Down:connect(function()
+	for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+		if v:FindFirstChild("ACS_Modulo") and v.Name ~= "M870" and v.Name ~= "SVD" and v.Name ~= "Double Barrel" then
+			local mods = require(v.ACS_Modulo.Variaveis.Settings)
+			mods.Name = "Modded "..v.Name
+			mods.Bullets = 1
+			mods.MinRecoilPower = 0
+			mods.MaxRecoilPower = 0
+			mods.MaxSpread = 5
+			mods.Ammo = 50000
+			mods.FireModes = {
+				ChangeFiremode = true,
+				Semi = true,
+				Burst = true,
+				Auto = true,
+				Explosive = false
+			} end
+	end
+end)
+
+
+mod.Name = "mod"
+mod.Parent = util2
+mod.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+mod.BorderSizePixel = 0
+mod.Position = UDim2.new(0.00999999978, 0, 0.186131388, 0)
+mod.Size = UDim2.new(0, 98, 0, 66)
+mod.ZIndex = 5
+mod.Font = Enum.Font.PatrickHand
+mod.Text = "Mod M870, DB and SVD"
+mod.TextColor3 = Color3.fromRGB(255, 255, 255)
+mod.TextScaled = true
+mod.TextSize = 14.000
+mod.TextWrapped = true
+mod.MouseButton1Down:connect(function()
+	for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+		if v:FindFirstChild("ACS_Modulo") and v.Name == "M870" or v.Name == "Double Barrel" or v.Name == "SVD" then
+			local mods = require(v.ACS_Modulo.Variaveis.Settings)
+			mods.Name = "Modded "..v.Name
+			--mods.Bullets = 1
+			mods.MinRecoilPower = 0
+			mods.MaxRecoilPower = 0
+			mods.MaxSpread = 5
+			mods.Ammo = 50000
+			mods.FireModes = {
+				ChangeFiremode = true,
+				Semi = true,
+				Burst = true,
+				Auto = true,
+				Explosive = false
+			} end
+	end
+end)
+
+util2_2.Name = "util2"
+util2_2.Parent = UTILITY
+util2_2.Active = true
+util2_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+util2_2.BackgroundTransparency = 1.000
+util2_2.BorderSizePixel = 0
+util2_2.Position = UDim2.new(0.0918727964, 0, 0, 0)
+util2_2.Size = UDim2.new(0, 100, 0, 274)
+util2_2.CanvasSize = UDim2.new(0, 0, 5, 0)
+util2_2.ScrollBarThickness = 1
+
+UIListLayout_4.Parent = util2_2
+UIListLayout_4.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout_4.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_4.Padding = UDim.new(0, 5)
+
+Title_3.Name = "Title"
+Title_3.Parent = util2_2
+Title_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_3.BackgroundTransparency = 1.000
+Title_3.BorderSizePixel = 0
+Title_3.Position = UDim2.new(-0.5, 0, 0, 0)
+Title_3.Size = UDim2.new(0, 97, 0, 18)
+Title_3.Font = Enum.Font.PatrickHand
+Title_3.Text = "Utility 3"
+Title_3.TextColor3 = Color3.fromRGB(34, 34, 34)
+Title_3.TextScaled = true
+Title_3.TextSize = 14.000
+Title_3.TextWrapped = true
+
+loopr_2.Name = "loopr"
+loopr_2.Parent = util2_2
+loopr_2.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+loopr_2.BorderSizePixel = 0
+loopr_2.Size = UDim2.new(0, 98, 0, 23)
+loopr_2.ZIndex = 5
+loopr_2.Font = Enum.Font.PatrickHand
+loopr_2.Text = "Get Heal Gun (semi artificial)"
+loopr_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+loopr_2.TextScaled = true
+loopr_2.Visible = false
+loopr_2.TextSize = 14.000
+loopr_2.TextWrapped = true
+loopr_2.MouseButton1Down:connect(function()
+	local args = {
+		[1] = "Gun License",
+		[2] = "Weapons Dealer"
+	}
+	game:GetService("ReplicatedStorage").Shop.PurchaseFromShop:InvokeServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = "M9",
+		[2] = "Weapons Dealer"
+	}
+	game:GetService("ReplicatedStorage").Shop.PurchaseFromShop:InvokeServer(unpack(args))
+end)
+
+loopr_3.Name = "loopr"
+loopr_3.Parent = util2_2
+loopr_3.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+loopr_3.BorderSizePixel = 0
+loopr_3.Size = UDim2.new(0, 98, 0, 23)
+loopr_3.ZIndex = 5
+loopr_3.Font = Enum.Font.PatrickHand
+loopr_3.Text = "Buy DB"
+loopr_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+loopr_3.TextScaled = true
+loopr_3.TextSize = 14.000
+loopr_3.TextWrapped = true
+loopr_3.MouseButton1Down:connect(function()
+
+	local args = {
+		[1] = "Double Barrel",
+		[2] = "Black Market"
+	}
+	game:GetService("ReplicatedStorage").Shop.PurchaseFromShop:InvokeServer(unpack(args))
+end)
+
+loopr_4.Name = "loopr"
+loopr_4.Parent = util2_2
+loopr_4.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+loopr_4.BorderSizePixel = 0
+loopr_4.Size = UDim2.new(0, 98, 0, 23)
+loopr_4.ZIndex = 5
+loopr_4.Font = Enum.Font.PatrickHand
+loopr_4.Text = "Buy Uzi"
+loopr_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+loopr_4.TextScaled = true
+loopr_4.TextSize = 14.000
+loopr_4.TextWrapped = true
+loopr_4.MouseButton1Down:connect(function()
+
+	local args = {
+		[1] = "UZI",
+		[2] = "Black Market"
+	}
+	game:GetService("ReplicatedStorage").Shop.PurchaseFromShop:InvokeServer(unpack(args))
+end)
+
+loopr_5.Name = "loopr"
+loopr_5.Parent = util2_2
+loopr_5.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+loopr_5.BorderSizePixel = 0
+loopr_5.Size = UDim2.new(0, 98, 0, 23)
+loopr_5.ZIndex = 5
+loopr_5.Font = Enum.Font.PatrickHand
+loopr_5.Text = "Buy Eagle"
+loopr_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+loopr_5.TextScaled = true
+loopr_5.TextSize = 14.000
+loopr_5.TextWrapped = true
+loopr_5.MouseButton1Down:connect(function()
+
+	local args = {
+		[1] = "Eagle",
+		[2] = "Black Market"
+	}
+	game:GetService("ReplicatedStorage").Shop.PurchaseFromShop:InvokeServer(unpack(args))
+end)
+
+
+loopr_6.Name = "loopr"
+loopr_6.Parent = util2_2
+loopr_6.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+loopr_6.BorderSizePixel = 0
+loopr_6.Size = UDim2.new(0, 98, 0, 23)
+loopr_6.ZIndex = 5
+loopr_6.Font = Enum.Font.PatrickHand
+loopr_6.Text = "Buy AKM"
+loopr_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+loopr_6.TextScaled = true
+loopr_6.TextSize = 14.000
+loopr_6.TextWrapped = true
+loopr_6.MouseButton1Down:connect(function()
+
+	local args = {
+		[1] = "AKM",
+		[2] = "Black Market"
+	}
+	game:GetService("ReplicatedStorage").Shop.PurchaseFromShop:InvokeServer(unpack(args))
+end)
+
+
+loopr_7.Name = "loopr"
+loopr_7.Parent = util2_2
+loopr_7.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+loopr_7.BorderSizePixel = 0
+loopr_7.Size = UDim2.new(0, 98, 0, 23)
+loopr_7.ZIndex = 5
+loopr_7.Font = Enum.Font.PatrickHand
+loopr_7.Text = "Buy Drill"
+loopr_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+loopr_7.TextScaled = true
+loopr_7.TextSize = 14.000
+loopr_7.TextWrapped = true
+loopr_7.MouseButton1Down:connect(function()
+
+	local args = {
+		[1] = "Drill",
+		[2] = "Black Market"
+	}
+	game:GetService("ReplicatedStorage").Shop.PurchaseFromShop:InvokeServer(unpack(args))
+end)
+
+
+loopr_8.Name = "loopr"
+loopr_8.Parent = util2_2
+loopr_8.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+loopr_8.BorderSizePixel = 0
+loopr_8.Size = UDim2.new(0, 98, 0, 23)
+loopr_8.ZIndex = 5
+loopr_8.Font = Enum.Font.PatrickHand
+loopr_8.Text = "Buy SVD"
+loopr_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+loopr_8.TextScaled = true
+loopr_8.TextSize = 14.000
+loopr_8.TextWrapped = true
+loopr_8.MouseButton1Down:connect(function()
+
+	local args = {
+		[1] = "SVD",
+		[2] = "Black Market"
+	}
+	game:GetService("ReplicatedStorage").Shop.PurchaseFromShop:InvokeServer(unpack(args))
+end)
+
+
+loopr_9.Name = "loopr"
+loopr_9.Parent = util2_2
+loopr_9.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+loopr_9.BorderSizePixel = 0
+loopr_9.Size = UDim2.new(0, 98, 0, 23)
+loopr_9.ZIndex = 5
+loopr_9.Font = Enum.Font.PatrickHand
+loopr_9.Text = "Buy HK416"
+loopr_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+loopr_9.TextScaled = true
+loopr_9.TextSize = 14.000
+loopr_9.TextWrapped = true
+loopr_9.MouseButton1Down:connect(function()
+	local args = {
+		[1] = "HK416",
+		[2] = "Weapons Dealer"
+	}
+	game:GetService("ReplicatedStorage").Shop.PurchaseFromShop:InvokeServer(unpack(args))
+end)
+
+loopr_10.Name = "loopr"
+loopr_10.Parent = util2_2
+loopr_10.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+loopr_10.BorderSizePixel = 0
+loopr_10.Size = UDim2.new(0, 98, 0, 23)
+loopr_10.ZIndex = 5
+loopr_10.Font = Enum.Font.PatrickHand
+loopr_10.Text = "Buy License"
+loopr_10.TextColor3 = Color3.fromRGB(255, 255, 255)
+loopr_10.TextScaled = true
+loopr_10.TextSize = 14.000
+loopr_10.TextWrapped = true
+loopr_10.MouseButton1Down:connect(function()
+	local args = {
+		[1] = "Gun License",
+		[2] = "Weapons Dealer"
+	}
+	game:GetService("ReplicatedStorage").Shop.PurchaseFromShop:InvokeServer(unpack(args))
+end)
+
+util4.Name = "util4"
+util4.Parent = UTILITY
+util4.Active = true
+util4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+util4.BackgroundTransparency = 1.000
+util4.BorderSizePixel = 0
+util4.Position = UDim2.new(0.0918727964, 0, 0, 0)
+util4.Size = UDim2.new(0, 100, 0, 274)
+util4.CanvasSize = UDim2.new(0, 0, 5, 0)
+util4.ScrollBarThickness = 1
+
+UIListLayout_5.Parent = util4
+UIListLayout_5.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout_5.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_5.Padding = UDim.new(0, 5)
+
+Title_4.Name = "Title"
+Title_4.Parent = util4
+Title_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_4.BackgroundTransparency = 1.000
+Title_4.BorderSizePixel = 0
+Title_4.Position = UDim2.new(-0.5, 0, 0, 0)
+Title_4.Size = UDim2.new(0, 97, 0, 18)
+Title_4.Font = Enum.Font.PatrickHand
+Title_4.Text = "Utility 4"
+Title_4.TextColor3 = Color3.fromRGB(34, 34, 34)
+Title_4.TextScaled = true
+Title_4.TextSize = 14.000
+Title_4.TextWrapped = true
+
+loopr_11.Name = "loopr"
+loopr_11.Parent = util4
+loopr_11.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+loopr_11.BorderSizePixel = 0
+loopr_11.Size = UDim2.new(0, 98, 0, 23)
+loopr_11.ZIndex = 5
+loopr_11.Font = Enum.Font.PatrickHand
+loopr_11.Text = "Buy Med"
+loopr_11.TextColor3 = Color3.fromRGB(255, 255, 255)
+loopr_11.TextScaled = true
+loopr_11.TextSize = 14.000
+loopr_11.TextWrapped = true
+loopr_11.MouseButton1Down:connect(function()
+
+	local args = {
+		[1] = "Medkit",
+		[2] = "Doctor"
+	}
+	game:GetService("ReplicatedStorage").Shop.PurchaseFromShop:InvokeServer(unpack(args))
+end)
+local loopr_112 = Instance.new("TextButton")
+loopr_112.Name = "loopr"
+loopr_112.Parent = util4
+loopr_112.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+loopr_112.BorderSizePixel = 0
+loopr_112.Size = UDim2.new(0, 98, 0, 23)
+loopr_112.ZIndex = 5
+loopr_112.Font = Enum.Font.PatrickHand
+loopr_112.Text = "Heal Tools"
+loopr_112.TextColor3 = Color3.fromRGB(255, 255, 255)
+loopr_112.TextScaled = true
+loopr_112.TextSize = 14.000
+loopr_112.TextWrapped = true
+loopr_112.MouseButton1Down:connect(function()
+	if _G.PreGenGUID ~= nil then
+		local a = Instance.new("Tool")
+		a.ToolTip = "heal self"
+		a.Name = "Heal self"
+		a.Parent = game.Players.LocalPlayer.Backpack
+		a.RequiresHandle = false
+		a.Activated:connect(function()
+			local bc = -(game.Players.LocalPlayer.Character.Humanoid.MaxHealth - game.Players.LocalPlayer.Character.Humanoid.Health)
+			dodmg(game.Players.LocalPlayer,bc)
+		end)
+		local a = Instance.new("Tool")
+		a.ToolTip = "godmode"
+		a.Name = "godmode (perm)"
+		a.Parent = game.Players.LocalPlayer.Backpack
+		a.RequiresHandle = false
+		a.Activated:connect(function()
+			dodmg(game.Players.LocalPlayer,-5000)
+		end)
+		local a = Instance.new("Tool")
+		a.ToolTip = "armor"
+		a.Name = "armor"
+		a.Parent = game.Players.LocalPlayer.Backpack
+		a.RequiresHandle = false
+		a.Activated:connect(function()
+			dodmg(game.Players.LocalPlayer,-200)
+		end)
+	else
+		loopr_112.Text = "PREGENGUID NOT FOUND"
+		wait(2)
+		loopr_112.Text = "Heal Tools"
+	end
+end)
+
+loopr_12.Name = "loopr"
+loopr_12.Parent = util4
+loopr_12.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+loopr_12.BorderSizePixel = 0
+loopr_12.Size = UDim2.new(0, 98, 0, 23)
+loopr_12.ZIndex = 5
+loopr_12.Font = Enum.Font.PatrickHand
+loopr_12.Text = "Buy Drill"
+loopr_12.TextColor3 = Color3.fromRGB(255, 255, 255)
+loopr_12.TextScaled = true
+loopr_12.TextSize = 14.000
+loopr_12.TextWrapped = true
+loopr_12.Visible = false
+
+Playerwork.Name = "Playerwork"
+Playerwork.Parent = tabs
+Playerwork.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Playerwork.BackgroundTransparency = 1.000
+Playerwork.BorderSizePixel = 0
+Playerwork.Size = UDim2.new(0, 566, 0, 287)
+Playerwork.Visible = false
+
+util_2.Name = "util"
+util_2.Parent = Playerwork
+util_2.Active = true
+util_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+util_2.BackgroundTransparency = 3.000
+util_2.BorderSizePixel = 0
+util_2.Position = UDim2.new(0.811473608, 0, -0.0348432064, 0)
+util_2.Size = UDim2.new(0, 106, 0, 274)
+util_2.CanvasSize = UDim2.new(0, 0, 5, 0)
+util_2.ScrollBarThickness = 1
+
+UIListLayout_6.Parent = util_2
+UIListLayout_6.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout_6.SortOrder = Enum.SortOrder.LayoutOrder
+
+Title_5.Name = "Title"
+Title_5.Parent = util_2
+Title_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_5.BackgroundTransparency = 1.000
+Title_5.BorderSizePixel = 0
+Title_5.Position = UDim2.new(0.0426791199, 0, 0, 0)
+Title_5.Size = UDim2.new(0, 101, 0, 18)
+Title_5.Font = Enum.Font.PatrickHand
+Title_5.Text = "Selected"
+Title_5.TextColor3 = Color3.fromRGB(34, 34, 34)
+Title_5.TextScaled = true
+Title_5.TextSize = 14.000
+Title_5.TextWrapped = true
+
+pep.Name = "pep"
+pep.Parent = util_2
+pep.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+pep.BorderSizePixel = 0
+pep.Position = UDim2.new(0.0377358496, 0, 0.0839416087, 0)
+pep.Size = UDim2.new(0, 102, 0, 23)
+pep.ZIndex = 5
+pep.Font = Enum.Font.PatrickHand
+pep.Text = "Pepper Spray"
+pep.TextColor3 = Color3.fromRGB(255, 255, 255)
+pep.TextScaled = true
+pep.TextSize = 14.000
+pep.TextWrapped = true
+_G.Spraying = plrselected
+pep.MouseButton1Down:connect(function()
+	local LP = game.Players.LocalPlayer
+	if not LP.Backpack:FindFirstChild("PepperSpray") and not LP.Character:FindFirstChild("PepperSpray") then
+		local args = {
+			[1] = "PepperSpray",
+			[2] = "Doctor"
+		}
+		game:GetService("ReplicatedStorage").Shop.PurchaseFromShop:InvokeServer(unpack(args))
+	end
+	local sprayer = LP.Backpack["PepperSpray"]
+	LP.Character.Humanoid:EquipTool(sprayer) wait(0)
+	local spraybox = LP.Character:FindFirstChild("PepperSpray").Spray
+	_G.Spraying = plrselected
+	--spawn(function()
+	--	while wait() do
+	local spraybox = LP.Character:WaitForChild("PepperSpray").Spray
+	spraybox.Transparency = 0
+	spraybox.CanCollide = false
+	spawn(function()
+		while LP.Character:FindFirstChild("PepperSpray") do
+			wait()
+			spraybox.Position = _G.Spraying.Character.Head.Position
+		end
+	end)
+	local args = { [1] = "Button1Down" } game:GetService("Players").LocalPlayer.Character.PepperSpray.PepperSprayFunction.PepperSprayEvent:FireServer(unpack(args)) wait(0.6) local args = { [1] = "Button1Up" } game:GetService("Players").LocalPlayer.Character.PepperSpray.PepperSprayFunction.PepperSprayEvent:FireServer(unpack(args))
+	LP.Character.Humanoid:UnequipTools()
+	--	end
+	--	end)
+end)
+
+
+local monss = 0
+function modifymons(typee)
+	if typee == "steal" then
+		local args = { [1] = plrselected.Name, [2] = -(monss)} game:GetService("ReplicatedStorage").ATM.BankCheck:InvokeServer(unpack(args))
+	end
+	if typee == "steal2" then
+		local args = { [1] = plrselected.Name, [2] = -(-(monss))} game:GetService("ReplicatedStorage").ATM.BankCheck:InvokeServer(unpack(args))
+	end
+end
+
+stealmo.Name = "stealmo"
+stealmo.Parent = util_2
+stealmo.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+stealmo.BorderSizePixel = 0
+stealmo.Position = UDim2.new(0.0377358496, 0, 0.0839416087, 0)
+stealmo.Size = UDim2.new(0, 102, 0, 23)
+stealmo.ZIndex = 5
+stealmo.Font = Enum.Font.PatrickHand
+stealmo.Text = "Steal Money"
+stealmo.TextColor3 = Color3.fromRGB(255, 255, 255)
+stealmo.TextScaled = true
+stealmo.TextSize = 14.000
+stealmo.TextWrapped = true
+stealmo.MouseButton1Down:connect(function()
+	modifymons("steal")
+end)
+
+local stealmo2= Instance.new("TextButton")
+stealmo2.Name = "stealmo"
+stealmo2.Parent = util_2
+stealmo2.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+stealmo2.BorderSizePixel = 0
+stealmo2.Position = UDim2.new(0.0377358496, 0, 0.0839416087, 0)
+stealmo2.Size = UDim2.new(0, 102, 0, 23)
+stealmo2.ZIndex = 5
+stealmo2.Font = Enum.Font.PatrickHand
+stealmo2.Text = "Wi Money"
+stealmo2.TextColor3 = Color3.fromRGB(255, 255, 255)
+stealmo2.TextScaled = true
+stealmo2.TextSize = 14.000
+stealmo2.TextWrapped = true
+stealmo2.MouseButton1Down:connect(function()
+	local args = {
+		[1] = 55555,
+		[2] = "Withdrawl"
+	}
+	game:GetService("ReplicatedStorage").ATM.TransferMoney:InvokeServer(unpack(args))
+end)
+local stealmo2a= Instance.new("TextButton")
+stealmo2a.Name = "stealmo"
+stealmo2a.Parent = util_2
+stealmo2a.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+stealmo2a.BorderSizePixel = 0
+stealmo2a.Position = UDim2.new(0.0377358496, 0, 0.0839416087, 0)
+stealmo2a.Size = UDim2.new(0, 102, 0, 23)
+stealmo2a.ZIndex = 5
+stealmo2a.Font = Enum.Font.PatrickHand
+stealmo2a.Text = "Deposit All"
+stealmo2a.TextColor3 = Color3.fromRGB(255, 255, 255)
+stealmo2a.TextScaled = true
+stealmo2a.TextSize = 14.000
+stealmo2a.TextWrapped = true
+stealmo2a.MouseButton1Down:connect(function()
+	local args = {
+		[1] = game.Players.LocalPlayer.HiddenStats.WalletCash.Value,
+		[2] = "Deposit"
+	}
+	game:GetService("ReplicatedStorage").ATM.TransferMoney:InvokeServer(unpack(args))
+end)
+
+local stealmo2ab= Instance.new("TextButton")
+stealmo2ab.Name = "stealmo"
+stealmo2ab.Parent = util_2
+stealmo2ab.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+stealmo2ab.BorderSizePixel = 0
+stealmo2ab.Position = UDim2.new(0.0377358496, 0, 0.0839416087, 0)
+stealmo2ab.Size = UDim2.new(0, 102, 0, 23)
+stealmo2ab.ZIndex = 5
+stealmo2ab.Font = Enum.Font.PatrickHand
+stealmo2ab.Text = "Withdraw All"
+stealmo2ab.TextColor3 = Color3.fromRGB(255, 255, 255)
+stealmo2ab.TextScaled = true
+stealmo2ab.TextSize = 14.000
+stealmo2ab.TextWrapped = true
+stealmo2ab.MouseButton1Down:connect(function()
+	local args = {
+		[1] = game.Players.LocalPlayer.HiddenStats.BankCash.Value,
+		[2] = "Withdrawl"
+	}
+	game:GetService("ReplicatedStorage").ATM.TransferMoney:InvokeServer(unpack(args))
+end)
+
+
+function locatestatus(plr)
+	local fileSettingsName = "shore_"..plr.Name..".txt"
+	local fileSettings = isfile(fileSettingsName)
+	if fileSettings then
+		local fileContent = readfile(fileSettingsName)
+		return fileContent
+	else
+		if plr.Name == "iki" then
+			return "TRUMAN"
+		else
+			return "NEUTRAL"
+		end
+	end
+end
+function editfile(plr)
+	local fileSettingsName = "shore_"..plr.Name..".txt"
+	local fileSettings = isfile(fileSettingsName)
+	if not fileSettings then
+		writefile(fileSettingsName,Status.Text)
+	else
+		writefile(fileSettingsName,Status.Text)
+	end
+end
+
+updstat.Name = "updstat"
+updstat.Parent = util_2
+updstat.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+updstat.BorderSizePixel = 0
+updstat.Position = UDim2.new(0.0377358496, 0, 0.0839416087, 0)
+updstat.Size = UDim2.new(0, 102, 0, 23)
+updstat.ZIndex = 5
+updstat.Font = Enum.Font.PatrickHand
+updstat.Text = "Update Status"
+updstat.TextColor3 = Color3.fromRGB(255, 255, 255)
+updstat.TextScaled = true
+updstat.TextSize = 14.000
+updstat.TextWrapped = true
+updstat.MouseButton1Down:connect(function()
+	editfile(plrselected)
+end)
+
+local updstat12 = Instance.new("TextButton")
+updstat12.Name = "updstat"
+updstat12.Parent = util_2
+updstat12.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+updstat12.BorderSizePixel = 0
+updstat12.Position = UDim2.new(0.0377358496, 0, 0.0839416087, 0)
+updstat12.Size = UDim2.new(0, 102, 0, 23)
+updstat12.ZIndex = 5
+updstat12.Font = Enum.Font.PatrickHand
+updstat12.Text = "Deal Damage"
+updstat12.TextColor3 = Color3.fromRGB(255, 255, 255)
+updstat12.TextScaled = true
+updstat12.TextSize = 14.000
+updstat12.TextWrapped = true
+updstat12.MouseButton1Down:connect(function()
+	if _G.PreGenGUID ~= nil then
+		dodmg(plrselected,Status1.Text)
+	else
+		updstat12.Text = "PREGENGUID NOT FOUND"
+		wait(2)
+		updstat12.Text = "Deal Damage"
+	end
+end)
+
+local updstat1 = Instance.new("TextButton")
+updstat1.Name = "updstat"
+updstat1.Parent = util_2
+updstat1.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+updstat1.BorderSizePixel = 0
+updstat1.Position = UDim2.new(0.0377358496, 0, 0.0839416087, 0)
+updstat1.Size = UDim2.new(0, 102, 0, 23)
+updstat1.ZIndex = 5
+updstat1.Font = Enum.Font.PatrickHand
+updstat1.Text = "Kill"
+updstat1.TextColor3 = Color3.fromRGB(255, 255, 255)
+updstat1.TextScaled = true
+updstat1.TextSize = 14.000
+updstat1.TextWrapped = true
+updstat1.MouseButton1Down:connect(function()
+	if _G.PreGenGUID ~= nil then
+		dodmg(plrselected,500)
+	else
+		updstat1.Text = "PREGENGUID NOT FOUND"
+		wait(2)
+		updstat1.Text = "Kill"
+	end
+end)
+
+local updstat11 = Instance.new("TextButton")
+updstat11.Name = "updstat"
+updstat11.Parent = util_2
+updstat11.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+updstat11.BorderSizePixel = 0
+updstat11.Position = UDim2.new(0.0377358496, 0, 0.0839416087, 0)
+updstat11.Size = UDim2.new(0, 102, 0, 23)
+updstat11.ZIndex = 5
+updstat11.Font = Enum.Font.PatrickHand
+updstat11.Text = "Set health to 1"
+updstat11.TextColor3 = Color3.fromRGB(255, 255, 255)
+updstat11.TextScaled = true
+updstat11.TextSize = 14.000
+updstat11.TextWrapped = true
+updstat11.MouseButton1Down:connect(function()
+	if _G.PreGenGUID ~= nil then
+		dodmg(plrselected,(plrselected.Character.Humanoid.Health - 1))
+	else
+		updstat11.Text = "PREGENGUID NOT FOUND"
+		wait(2)
+		updstat11.Text = "Set health to 1"
+	end
+end)
+local updstat111 = Instance.new("TextButton")
+updstat111.Name = "updstat"
+updstat111.Parent = util_2
+updstat111.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+updstat111.BorderSizePixel = 0
+updstat111.Position = UDim2.new(0.0377358496, 0, 0.0839416087, 0)
+updstat111.Size = UDim2.new(0, 102, 0, 23)
+updstat111.ZIndex = 5
+updstat111.Font = Enum.Font.PatrickHand
+updstat111.Text = "Heal (full)"
+updstat111.TextColor3 = Color3.fromRGB(255, 255, 255)
+updstat111.TextScaled = true
+updstat111.TextSize = 14.000
+updstat111.TextWrapped = true
+updstat111.MouseButton1Down:connect(function()
+	if _G.PreGenGUID ~= nil then
+		dodmg(plrselected,(-plrselected.Character.Humanoid.MaxHealth - plrselected.Character.Humanoid.Health))
+	else
+		updstat111.Text = "PREGENGUID NOT FOUND"
+		wait(2)
+		updstat111.Text = "Heal (full)"
+	end
+end)
+local updstat1111 = Instance.new("TextButton")
+updstat1111.Name = "updstat"
+updstat1111.Parent = util_2
+updstat1111.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+updstat1111.BorderSizePixel = 0
+updstat1111.Position = UDim2.new(0.0377358496, 0, 0.0839416087, 0)
+updstat1111.Size = UDim2.new(0, 102, 0, 23)
+updstat1111.ZIndex = 5
+updstat1111.Font = Enum.Font.PatrickHand
+updstat1111.Text = "Dial"
+updstat1111.TextColor3 = Color3.fromRGB(255, 255, 255)
+updstat1111.TextScaled = true
+updstat1111.TextSize = 14.000
+updstat1111.TextWrapped = true
+updstat1111.MouseButton1Down:connect(function()
+	if game.Players.LocalPlayer.Backpack:FindFirstChild("PhoneTool") then
+		game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("PhoneTool"))
+	end wait(0)
+	local args = {
+		[1] = plrselected.UserId
+	}
+	game:GetService("ReplicatedStorage").PhoneEvents.DialFunction:InvokeServer(unpack(args))
+end)
+
+
+
+
+function selectplr(data)
+	plrselected = data.Plr
+	_G.Spraying = plrselected
+	local nowselected = plrselected
+	Plr.Image = "https://www.roblox.com/bust-thumbnail/image?userId="..data.Id.."&width=420&height=420&format=png"
+	nam.Text = "selected: "..data.Name
+	id.Text = "userid: "..data.Id
+	spawn(function()
+		while plrselected == nowselected do
+			hp.Text = "health: "..plrselected.Character.Humanoid.Health.."/"..plrselected.Character.Humanoid.MaxHealth
+			team.Text = plrselected.Team.Name
+			status.Text = "status: "..locatestatus(plrselected)
+			wait()
+		end
+	end)
+end
+spawn(function()
+	while wait(2) do
+		for i,v in pairs(plr:GetChildren()) do
+			if v:IsA("TextButton") then
+				v:Destroy()
+			end
+		end
+		for i,v in pairs(game.Players:GetChildren()) do
+			local new = exampl:Clone()
+			new.Parent = plr
+			new.Text = v.Name
+			new.Name = v.UserId
+			new.Visible = true
+			if v.Team.Name == "SERVER STAFF" or v.TeamColor == BrickColor.new("Dusty Rose") then
+				new.Text = "<b>"..v.Name.."</b>"
+				new.TextColor3 = BrickColor.new('Dusty Rose').Color
+			end
+			new.MouseButton1Down:connect(function()
+				local data ={
+					Plr = v,
+					Name = new.Text,
+					Id = new.Name
+				}
+				selectplr(data)
+			end)
+		end
+	end
+end)
+
+
+plr.Name = "plr"
+plr.Parent = Playerwork
+plr.Active = true
+plr.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+plr.BackgroundTransparency = 1.000
+plr.BorderSizePixel = 0
+plr.Position = UDim2.new(0.00176678447, 0, -0.0306619778, 0)
+plr.Size = UDim2.new(0, 148, 0, 272)
+plr.CanvasSize = UDim2.new(0, 0, 5, 0)
+plr.ScrollBarThickness = 1
+
+UIListLayout_7.Parent = plr
+UIListLayout_7.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout_7.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_7.Padding = UDim.new(0, 0)
+
+Plr.Name = "Plr"
+Plr.Parent = Playerwork
+Plr.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Plr.Position = UDim2.new(0.284368038, 0, -0.0321112163, 0)
+Plr.Size = UDim2.new(0, 65, 0, 65)
+Plr.Image = "https://www.roblox.com/bust-thumbnail/image?userId=258660&width=420&height=420&format=png"
+
+UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(209, 71, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(105, 105, 105))}
+UIGradient_2.Offset = Vector2.new(-0.270000011, 0.0299993902)
+UIGradient_2.Rotation = 410.63067626953
+UIGradient_2.Parent = Plr
+
+Shadow.Name = "Shadow"
+Shadow.Parent = Plr
+Shadow.AnchorPoint = Vector2.new(0.5, 0.5)
+Shadow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Shadow.BackgroundTransparency = 1.000
+Shadow.Position = UDim2.new(0.500999987, 0, 0.474999994, 0)
+Shadow.Size = UDim2.new(1, 40, 1, 40)
+Shadow.ZIndex = 0
+Shadow.Image = "rbxassetid://2654849154"
+Shadow.ImageColor3 = Color3.fromRGB(0, 0, 0)
+Shadow.ImageRectOffset = Vector2.new(2, 2)
+Shadow.ImageRectSize = Vector2.new(252, 252)
+Shadow.ImageTransparency = 0.750
+Shadow.ScaleType = Enum.ScaleType.Slice
+Shadow.SliceCenter = Rect.new(64, 64, 192, 192)
+Shadow.SliceScale = 0.310
+
+UICorner_2.CornerRadius = UDim.new(0.200000003, 5)
+UICorner_2.Parent = Shadow
+
+UICorner_3.CornerRadius = UDim.new(0.5, 5)
+UICorner_3.Parent = Plr
+
+hp.Name = "hp"
+hp.Parent = Playerwork
+hp.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+hp.BackgroundTransparency = 1.000
+hp.Position = UDim2.new(0.424547881, 0, 0.159430638, 0)
+hp.Size = UDim2.new(0, 219, 0, 15)
+hp.Font = Enum.Font.GothamBold
+hp.Text = "health: 0/115"
+hp.TextColor3 = Color3.fromRGB(85, 85, 127)
+hp.TextScaled = true
+hp.TextSize = 14.000
+hp.TextTransparency = 0.450
+hp.TextWrapped = true
+hp.TextXAlignment = Enum.TextXAlignment.Left
+
+team.Name = "team"
+team.Parent = Playerwork
+team.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+team.BackgroundTransparency = 1.000
+team.Position = UDim2.new(0.284099132, 0, 0.25962761, 0)
+team.Size = UDim2.new(0, 156, 0, 15)
+team.Font = Enum.Font.GothamBold
+team.Text = "team: "
+team.TextColor3 = Color3.fromRGB(85, 85, 127)
+team.TextScaled = true
+team.TextSize = 14.000
+team.TextTransparency = 0.450
+team.TextWrapped = true
+team.TextXAlignment = Enum.TextXAlignment.Left
+
+id.Name = "id"
+id.Parent = Playerwork
+id.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+id.BackgroundTransparency = 1.000
+id.Position = UDim2.new(0.424547881, 0, 0.0651321709, 0)
+id.Size = UDim2.new(0, 219, 0, 15)
+id.Font = Enum.Font.GothamBold
+id.Text = "userid: {userid}"
+id.TextColor3 = Color3.fromRGB(85, 85, 127)
+id.TextScaled = true
+id.TextSize = 14.000
+id.TextTransparency = 0.450
+id.TextWrapped = true
+id.TextXAlignment = Enum.TextXAlignment.Left
+
+nam.Name = "nam"
+nam.Parent = Playerwork
+nam.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+nam.BackgroundTransparency = 1.000
+nam.Position = UDim2.new(0.424547881, 0, -0.0291666165, 0)
+nam.Size = UDim2.new(0, 219, 0, 15)
+nam.Font = Enum.Font.GothamBold
+nam.Text = "selected: {selected}"
+nam.TextColor3 = Color3.fromRGB(85, 85, 127)
+nam.TextScaled = true
+nam.TextSize = 14.000
+nam.TextTransparency = 0.450
+nam.TextWrapped = true
+nam.TextXAlignment = Enum.TextXAlignment.Left
+
+status.Name = "status"
+status.Parent = Playerwork
+status.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+status.BackgroundTransparency = 1.000
+status.Position = UDim2.new(0.282910138, 0, 0.31189242, 0)
+status.Size = UDim2.new(0, 156, 0, 15)
+status.Font = Enum.Font.GothamBold
+status.Text = "status: TRUMAN"
+status.TextColor3 = Color3.fromRGB(85, 85, 127)
+status.TextScaled = true
+status.TextSize = 14.000
+status.TextTransparency = 0.450
+status.TextWrapped = true
+status.TextXAlignment = Enum.TextXAlignment.Left
+
+local healthamt = -1
+-- indicator for the btns of misc
+-- ABCKS
+
+
+Money.Name = "Money"
+Money.Parent = Playerwork
+Money.BackgroundColor3 = Color3.fromRGB(255, 255, 127)
+Money.Position = UDim2.new(0.328621894, 0, 0.41114983, 0)
+Money.Size = UDim2.new(0, 200, 0, 50)
+Money.Font = Enum.Font.SourceSans
+Money.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+Money.PlaceholderText = "Money"
+Money.Text = ""
+Money.TextColor3 = Color3.fromRGB(255, 255, 255)
+Money.TextScaled = true
+Money.TextSize = 14.000
+Money.TextWrapped = true
+Money.FocusLost:connect(function()
+	monss = Money.Text
+end)
+
+Shadow_2.Name = "Shadow"
+Shadow_2.Parent = Money
+Shadow_2.AnchorPoint = Vector2.new(0.5, 0.5)
+Shadow_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Shadow_2.BackgroundTransparency = 1.000
+Shadow_2.Position = UDim2.new(0.500999987, 0, 0.474999994, 0)
+Shadow_2.Size = UDim2.new(1, 40, 1, 40)
+Shadow_2.ZIndex = 0
+Shadow_2.Image = "rbxassetid://2654849154"
+Shadow_2.ImageColor3 = Color3.fromRGB(0, 0, 0)
+Shadow_2.ImageRectOffset = Vector2.new(2, 2)
+Shadow_2.ImageRectSize = Vector2.new(252, 252)
+Shadow_2.ImageTransparency = 0.750
+Shadow_2.ScaleType = Enum.ScaleType.Slice
+Shadow_2.SliceCenter = Rect.new(64, 64, 192, 192)
+Shadow_2.SliceScale = 0.310
+
+UICorner_4.CornerRadius = UDim.new(0, 5)
+UICorner_4.Parent = Money
+
+Status.Name = "Status"
+Status.Parent = Playerwork
+Status.BackgroundColor3 = Color3.fromRGB(255, 255, 127)
+Status.Position = UDim2.new(0.328621894, 0, 0.648083627, 0)
+Status.Size = UDim2.new(0, 200, 0, 50)
+Status.Font = Enum.Font.SourceSans
+Status.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+Status.PlaceholderText = "Status"
+Status.Text = ""
+Status.TextColor3 = Color3.fromRGB(255, 255, 255)
+Status.TextScaled = true
+Status.TextSize = 14.000
+Status.TextWrapped = true
+
+Shadow_3.Name = "Shadow"
+Shadow_3.Parent = Status
+Shadow_3.AnchorPoint = Vector2.new(0.5, 0.5)
+Shadow_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Shadow_3.BackgroundTransparency = 1.000
+Shadow_3.Position = UDim2.new(0.500999987, 0, 0.474999994, 0)
+Shadow_3.Size = UDim2.new(1, 40, 1, 40)
+Shadow_3.ZIndex = 0
+Shadow_3.Image = "rbxassetid://2654849154"
+Shadow_3.ImageColor3 = Color3.fromRGB(0, 0, 0)
+Shadow_3.ImageRectOffset = Vector2.new(2, 2)
+Shadow_3.ImageRectSize = Vector2.new(252, 252)
+Shadow_3.ImageTransparency = 0.750
+Shadow_3.ScaleType = Enum.ScaleType.Slice
+Shadow_3.SliceCenter = Rect.new(64, 64, 192, 192)
+Shadow_3.SliceScale = 0.310
+
+UICorner_5.CornerRadius = UDim.new(0, 5)
+UICorner_5.Parent = Status
+
+
+
+Status1.Name = "Status"
+Status1.Parent = Playerwork
+Status1.BackgroundColor3 = Color3.fromRGB(255, 255, 127)
+Status1.Position = UDim2.new(0.328621894, 0, 0.85, 0)
+Status1.Size = UDim2.new(0, 200, 0, 30)
+Status1.Font = Enum.Font.SourceSans
+Status1.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+Status1.PlaceholderText = "Damage"
+Status1.Text = ""
+Status1.TextColor3 = Color3.fromRGB(255, 255, 255)
+Status1.TextScaled = true
+Status1.TextSize = 14.000
+Status1.TextWrapped = true
+
+local Shadow_31 = Instance.new("ImageLabel")
+Shadow_31.Name = "Shadow"
+Shadow_31.Parent = Status1
+Shadow_31.AnchorPoint = Vector2.new(0.5, 0.5)
+Shadow_31.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Shadow_31.BackgroundTransparency = 1.000
+Shadow_31.Position = UDim2.new(0.500999987, 0, 0.474999994, 0)
+Shadow_31.Size = UDim2.new(1, 40, 1, 40)
+Shadow_31.ZIndex = 0
+Shadow_31.Image = "rbxassetid://2654849154"
+Shadow_31.ImageColor3 = Color3.fromRGB(0, 0, 0)
+Shadow_31.ImageRectOffset = Vector2.new(2, 2)
+Shadow_31.ImageRectSize = Vector2.new(252, 252)
+Shadow_31.ImageTransparency = 0.750
+Shadow_31.ScaleType = Enum.ScaleType.Slice
+Shadow_31.SliceCenter = Rect.new(64, 64, 192, 192)
+Shadow_31.SliceScale = 0.310
+
+local UICorner_5b = Instance.new("UICorner")
+UICorner_5b.CornerRadius = UDim.new(0, 5)
+UICorner_5b.Parent = Status1
+
+UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(203, 215, 253)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(225, 226, 227))}
+UIGradient_3.Parent = Main
+
+top.Name = "top"
+top.Parent = Main
+top.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+top.BackgroundTransparency = 1.000
+top.Position = UDim2.new(0.206030145, 0, 0, 0)
+top.Size = UDim2.new(0, 454, 0, 46)
+
+UIListLayout_8.Parent = top
+UIListLayout_8.FillDirection = Enum.FillDirection.Horizontal
+UIListLayout_8.HorizontalAlignment = Enum.HorizontalAlignment.Right
+UIListLayout_8.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_8.VerticalAlignment = Enum.VerticalAlignment.Center
+UIListLayout_8.Padding = UDim.new(0, 15)
+
+local UIListLayout_83 = Instance.new("UIListLayout")
+UIListLayout_83.Parent = Menu
+UIListLayout_83.FillDirection = Enum.FillDirection.Vertical
+UIListLayout_83.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout_83.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_83.VerticalAlignment = Enum.VerticalAlignment.Top
+UIListLayout_83.Padding = UDim.new(0, 5)
+
+power.Name = "power"
+power.Parent = top
+power.BackgroundTransparency = 1.000
+power.BorderSizePixel = 99
+power.LayoutOrder = 555
+power.Position = UDim2.new(0.5, 0, 0.5, 0)
+power.Size = UDim2.new(0, 25, 0, 25)
+power.ZIndex = 2
+power.Image = "rbxassetid://6764432408"
+power.ImageRectOffset = Vector2.new(100, 400)
+power.ImageRectSize = Vector2.new(50, 50)
+power.MouseButton1Down:connect(function()
+	for i,v in pairs(game.Players.LocalPlayer.PlayerGui:GetChildren()) do
+		if v.Name == "TrumanLib" then
+			v:Destroy()
+		end
+	end
+end)
+
+plist.Name = "plist"
+plist.Parent = top
+plist.BackgroundTransparency = 1.000
+plist.BorderSizePixel = 100
+plist.LayoutOrder = 103
+plist.Position = UDim2.new(0.5, 0, 0.5, 0)
+plist.Rotation = 1.000
+plist.Size = UDim2.new(0, 25, 0, 25)
+plist.Visible = false
+plist.ZIndex = 2
+plist.Image = "rbxassetid://3926307971"
+plist.ImageRectOffset = Vector2.new(564, 164)
+plist.ImageRectSize = Vector2.new(36, 36)
+
+notifications.Name = "notifications"
+notifications.Parent = top
+notifications.BackgroundTransparency = 1.000
+notifications.LayoutOrder = 102
+notifications.Position = UDim2.new(0.5, 0, 0.5, 0)
+notifications.Size = UDim2.new(0, 25, 0, 25)
+notifications.Visible = false
+notifications.ZIndex = 2
+notifications.Image = "rbxassetid://3926305904"
+notifications.ImageRectOffset = Vector2.new(844, 564)
+notifications.ImageRectSize = Vector2.new(36, 36)
+
+local moving = false
+more.Name = "more"
+more.Parent = top
+more.BackgroundTransparency = 1.000
+more.LayoutOrder = 555
+more.Position = UDim2.new(0.988400459, 0, -0.0898954794, 0)
+more.Size = UDim2.new(0, 25, 0, 25)
+more.ZIndex = 666666
+more.Image = "rbxassetid://3926305904"
+more.ImageRectOffset = Vector2.new(4, 804)
+more.ImageRectSize = Vector2.new(36, 36)
+more.MouseButton1Down:connect(function()
+	if moving == false then
+		moving = true
+		if Menu.Position == UDim2.new(0.33, 0,0.034, 0) then
+			local tweenService = game.TweenService
+			local tweenInfo = TweenInfo.new(0.1,Enum.EasingStyle.Sine)
+			local tween = tweenService:Create(Menu,tweenInfo,{Position = UDim2.new(-1.204, 0,0.034, 0)})
+			tween:Play()
+			wait(0.1)
+			moving = false
+		else
+			local tweenService = game.TweenService
+			local tweenInfo = TweenInfo.new(0.1,Enum.EasingStyle.Sine)
+			local tween = tweenService:Create(Menu,tweenInfo,{Position = UDim2.new(0.33, 0,0.034, 0)})
+			tween:Play()
+			wait(0.1)
+			moving = false
+		end
+	end
+end)
+
+Container.Name = "Container"
+Container.Parent = more
+Container.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Container.BackgroundTransparency = 1.000
+Container.ClipsDescendants = true
+Container.Position = UDim2.new(-3.16956043, 0, 0.671999514, 0)
+Container.Size = UDim2.new(0, 118, 0, 298)
+
+Menu.Name = "Menu"
+Menu.Parent = Container
+Menu.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Menu.BorderSizePixel = 0
+Menu.Position = UDim2.new(-1.204, 0, 0.0340000018, 0)
+Menu.Size = UDim2.new(0, 65, 0, 268)
+
+Shadow_4.Name = "Shadow"
+Shadow_4.Parent = Main
+Shadow_4.AnchorPoint = Vector2.new(0.5, 0.5)
+Shadow_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Shadow_4.BackgroundTransparency = 1.000
+Shadow_4.Position = UDim2.new(0.500999987, 0, 0.474999994, 0)
+Shadow_4.Size = UDim2.new(1, 40, 1, 40)
+Shadow_4.ZIndex = 0
+Shadow_4.Visible = false
+Shadow_4.Image = "rbxassetid://2654849154"
+Shadow_4.ImageColor3 = Color3.fromRGB(0, 0, 0)
+Shadow_4.ImageRectOffset = Vector2.new(2, 2)
+Shadow_4.ImageRectSize = Vector2.new(252, 252)
+Shadow_4.ImageTransparency = 0.750
+Shadow_4.ScaleType = Enum.ScaleType.Slice
+Shadow_4.SliceCenter = Rect.new(64, 64, 192, 192)
+Shadow_4.SliceScale = 0.310
+
+UIGradient_4.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(203, 215, 253)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(225, 226, 227))}
+UIGradient_4.Parent = Menu
+
+UTILITY_2.Name = "UTILITY"
+UTILITY_2.Parent = Menu
+UTILITY_2.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+UTILITY_2.BorderSizePixel = 0
+UTILITY_2.Size = UDim2.new(0, 66, 0, 23)
+UTILITY_2.Visible = true
+UTILITY_2.ZIndex = 5
+UTILITY_2.Font = Enum.Font.PatrickHand
+UTILITY_2.Text = "UTILITY"
+UTILITY_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+UTILITY_2.TextScaled = true
+UTILITY_2.TextSize = 14.000
+UTILITY_2.TextWrapped = true
+UTILITY_2.MouseButton1Down:connect(function()
+	swap("UTILITY")
+end)
+UTILITY_22.Name = "UTILITY"
+UTILITY_22.Parent = Menu
+UTILITY_22.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+UTILITY_22.BorderSizePixel = 0
+UTILITY_22.Size = UDim2.new(0, 66, 0, 23)
+UTILITY_22.Visible = true
+UTILITY_22.ZIndex = 5
+UTILITY_22.Font = Enum.Font.PatrickHand
+UTILITY_22.Text = "Misc"
+UTILITY_22.TextColor3 = Color3.fromRGB(255, 255, 255)
+UTILITY_22.TextScaled = true
+UTILITY_22.TextSize = 14.000
+UTILITY_22.TextWrapped = true
+UTILITY_22.MouseButton1Down:connect(function()
+	swap("PLAYERWORK")
+end)
+
+exampl.Name = "exampl"
+exampl.Parent = TrumanLib
+exampl.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+exampl.BorderSizePixel = 0
+exampl.Position = UDim2.new(-0.0641891882, 0, 0.0845588222, 0)
+exampl.Size = UDim2.new(0, 147, 0, 23)
+exampl.Visible = false
+exampl.ZIndex = 5
+exampl.Font = Enum.Font.PatrickHand
+exampl.Text = "Abagail"
+exampl.TextColor3 = Color3.fromRGB(255, 255, 255)
+exampl.TextScaled = true
+exampl.TextSize = 14.000
+exampl.TextWrapped = true
