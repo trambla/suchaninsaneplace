@@ -1,0 +1,691 @@
+
+-- my favorite song is the other side of paradise 
+
+for i,v in pairs(game.Players.LocalPlayer.PlayerGui:GetChildren()) do
+	if v.Name == "qqq" then
+		v:Destroy()
+	end
+end
+
+
+local qqq = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextBox = Instance.new("TextBox")
+local UIGradient = Instance.new("UIGradient")
+local UICorner = Instance.new("UICorner")
+local Shadow = Instance.new("ImageLabel")
+local Frame_2 = Instance.new("Frame")
+local cc = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local UIGradient_2 = Instance.new("UIGradient")
+local Shadow_2 = Instance.new("ImageLabel")
+local TextLabel = Instance.new("TextLabel")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local UIListLayout = Instance.new("UIListLayout")
+local x = Instance.new("TextButton")
+local Searc = Instance.new("TextBox")
+local UICorner_3 = Instance.new("UICorner")
+local Shadow_3 = Instance.new("ImageLabel")
+local exa = Instance.new("TextLabel")
+local x_2 = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local cred = Instance.new("TextLabel")
+
+--Properties:
+
+qqq.Name = "qqq"
+qqq.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+qqq.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+qqq.ResetOnSpawn = false
+
+Frame.Parent = qqq
+Frame.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+Frame.Position = UDim2.new(0.405999988, 0, 1.20000005, 0)
+Frame.Size = UDim2.new(0, 620, 0, 37)
+
+TextBox.Parent = Frame
+TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.BackgroundTransparency = 1.000
+TextBox.Position = UDim2.new(0.0322580636, 0, 0, 0)
+TextBox.Size = UDim2.new(0, 600, 0, 34)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.PlaceholderText = "command"
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextScaled = true
+TextBox.TextSize = 14.000
+TextBox.TextWrapped = true
+TextBox.TextXAlignment = Enum.TextXAlignment.Left
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(203, 215, 253)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(225, 226, 227))}
+UIGradient.Parent = Frame
+
+UICorner.CornerRadius = UDim.new(0, 3)
+UICorner.Parent = Frame
+
+Shadow.Name = "Shadow"
+Shadow.Parent = Frame
+Shadow.AnchorPoint = Vector2.new(0.5, 0.5)
+Shadow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Shadow.BackgroundTransparency = 1.000
+Shadow.Position = UDim2.new(0.500999987, 0, 0.474999994, 0)
+Shadow.Size = UDim2.new(1, 40, 1, 40)
+Shadow.ZIndex = 0
+Shadow.Image = "rbxassetid://2654849154"
+Shadow.ImageColor3 = Color3.fromRGB(0, 0, 0)
+Shadow.ImageRectOffset = Vector2.new(2, 2)
+Shadow.ImageRectSize = Vector2.new(252, 252)
+Shadow.ImageTransparency = 0.500
+Shadow.ScaleType = Enum.ScaleType.Slice
+Shadow.SliceCenter = Rect.new(64, 64, 192, 192)
+Shadow.SliceScale = 0.310
+
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.fromRGB(85, 85, 255)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(-0.00200000009, 0, 0.920000017, 0)
+Frame_2.Size = UDim2.new(0, 623, 0, 3)
+
+cc.Name = "cc"
+cc.Parent = qqq
+cc.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+cc.Position = UDim2.new(0.405778885, 0, 0.335164845, 0)
+cc.Size = UDim2.new(0, 300, 0, 300)
+cc.Visible = false
+
+UICorner_2.CornerRadius = UDim.new(0, 3)
+UICorner_2.Parent = cc
+
+UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(203, 215, 253)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(225, 226, 227))}
+UIGradient_2.Parent = cc
+
+Shadow_2.Name = "Shadow"
+Shadow_2.Parent = cc
+Shadow_2.AnchorPoint = Vector2.new(0.5, 0.5)
+Shadow_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Shadow_2.BackgroundTransparency = 1.000
+Shadow_2.Position = UDim2.new(0.500999987, 0, 0.474999994, 0)
+Shadow_2.Size = UDim2.new(1, 40, 1, 40)
+Shadow_2.ZIndex = 0
+Shadow_2.Image = "rbxassetid://2654849154"
+Shadow_2.ImageColor3 = Color3.fromRGB(0, 0, 0)
+Shadow_2.ImageRectOffset = Vector2.new(2, 2)
+Shadow_2.ImageRectSize = Vector2.new(252, 252)
+Shadow_2.ImageTransparency = 0.500
+Shadow_2.ScaleType = Enum.ScaleType.Slice
+Shadow_2.SliceCenter = Rect.new(64, 64, 192, 192)
+Shadow_2.SliceScale = 0.310
+
+TextLabel.Parent = cc
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Size = UDim2.new(0, 300, 0, 20)
+TextLabel.Font = Enum.Font.Oswald
+TextLabel.Text = "COMMANDS"
+TextLabel.TextColor3 = Color3.fromRGB(85, 170, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+ScrollingFrame.Parent = cc
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.BackgroundTransparency = 1.000
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(0, 0, 0.129999995, 0)
+ScrollingFrame.Size = UDim2.new(0, 300, 0, 261)
+ScrollingFrame.ScrollBarThickness = 2
+
+UIListLayout.Parent = ScrollingFrame
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+
+x.Name = "x"
+x.Parent = cc
+x.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+x.BackgroundTransparency = 1.000
+x.Position = UDim2.new(0.916666687, 0, 0, 0)
+x.Size = UDim2.new(0, 25, 0, 25)
+x.Font = Enum.Font.Arial
+x.LineHeight = 1.100
+x.Text = "X"
+x.TextColor3 = Color3.fromRGB(170, 0, 0)
+x.TextSize = 14.000
+
+Searc.Name = "Searc"
+Searc.Parent = cc
+Searc.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+Searc.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Searc.Position = UDim2.new(0.166666672, 0, 0.0666666701, 0)
+Searc.Size = UDim2.new(0, 200, 0, 12)
+Searc.Font = Enum.Font.ArialBold
+Searc.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+Searc.PlaceholderText = "Search Commands"
+Searc.Text = ""
+Searc.TextColor3 = Color3.fromRGB(255, 255, 255)
+Searc.TextSize = 14.000
+
+UICorner_3.CornerRadius = UDim.new(0, 2)
+UICorner_3.Parent = Searc
+
+Shadow_3.Name = "Shadow"
+Shadow_3.Parent = Searc
+Shadow_3.AnchorPoint = Vector2.new(0.5, 0.5)
+Shadow_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Shadow_3.BackgroundTransparency = 1.000
+Shadow_3.Position = UDim2.new(0.500999987, 0, 0.474999994, 0)
+Shadow_3.Size = UDim2.new(1, 40, 1, 40)
+Shadow_3.ZIndex = 0
+Shadow_3.Image = "rbxassetid://2654849154"
+Shadow_3.ImageColor3 = Color3.fromRGB(0, 0, 0)
+Shadow_3.ImageRectOffset = Vector2.new(2, 2)
+Shadow_3.ImageRectSize = Vector2.new(252, 252)
+Shadow_3.ImageTransparency = 0.500
+Shadow_3.ScaleType = Enum.ScaleType.Slice
+Shadow_3.SliceCenter = Rect.new(64, 64, 192, 192)
+Shadow_3.SliceScale = 0.310
+
+exa.Name = "exa"
+exa.Parent = cc
+exa.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+exa.BackgroundTransparency = 1.000
+exa.Position = UDim2.new(0, 0, 0.123333335, 0)
+exa.Size = UDim2.new(0, 300, 0, 14)
+exa.Visible = false
+exa.ZIndex = 3
+exa.Font = Enum.Font.Code
+exa.Text = "text - <font color=\"rgb(255,165,0)\">Kills the user.</font>"
+exa.TextColor3 = Color3.fromRGB(255, 255, 255)
+exa.TextScaled = true
+exa.TextSize = 14.000
+exa.TextWrapped = true
+
+x_2.Name = "x"
+x_2.Parent = exa
+x_2.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+x_2.BackgroundTransparency = 0.500
+x_2.Position = UDim2.new(0.916666687, 0, 0, 0)
+x_2.Size = UDim2.new(0, 19, 0, 15)
+x_2.ZIndex = 8
+x_2.Font = Enum.Font.ArialBold
+x_2.LineHeight = 1.100
+x_2.Text = "</>"
+x_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+x_2.TextScaled = true
+x_2.TextSize = 14.000
+x_2.TextWrapped = true
+
+UICorner_4.CornerRadius = UDim.new(0, 3)
+UICorner_4.Parent = x_2
+
+cred.Name = "cred"
+cred.Parent = qqq
+cred.Active = true
+cred.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+cred.BackgroundTransparency = 1.000
+cred.Position = UDim2.new(0, 0, 0.0307692289, 0)
+cred.Size = UDim2.new(0, 200, 0, 8)
+cred.ZIndex = 666666666
+cred.Font = Enum.Font.Merriweather
+cred.Text = "UNIVERSAL CO.\\nuse cmds for cmd list\\nKeybind: '"
+cred.TextColor3 = Color3.fromRGB(255, 255, 255)
+cred.TextSize = 14.000
+
+-- Scripts:
+
+local function FAQFX_fake_script() -- qqq.hand 
+	local script = Instance.new('LocalScript', qqq)
+
+	local plr = game.Players.LocalPlayer
+	local mouse = plr:GetMouse()
+	local keybind = "'"
+	local cmds = {}
+	local tweenService = game.TweenService local timeb = 0.5
+	local tweenInfo = TweenInfo.new(timeb,Enum.EasingStyle.Sine)
+	tweenService:Create(script.Parent.Frame,tweenInfo,{Position = UDim2.new(0.406,0,1.2,0)}):Play()
+
+	function addCmd(name,desc,func)
+		cmds[#cmds+1]=
+			{
+				Alias=name;
+				Desc=desc;
+				Func=func;
+			}
+	end
+
+	local locate = function(who)
+		for i,v in pairs(game.Players:GetChildren()) do
+			if string.lower(v.Name):match(string.lower(who)) and who ~= "me" then
+				return v
+			end
+			if who == "me" then
+				return game.Players.LocalPlayer
+			end
+		end
+	end
+	for i,v in pairs(script.Parent:GetDescendants()) do
+		if v:IsA("TextLabel") then
+			v.RichText = true
+		end
+	end
+	function locateoto(what)
+	    local found = false
+		if what == "all" then
+		    found = true
+			return "ABC"
+		end
+		for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+			if string.lower(v.Name):match(string.lower(what)) then
+			    found = true
+				return v
+			end
+		end
+		if found == false then
+		    for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+			if string.lower(v.Name):match(string.lower(what)) then
+			    found = true
+				return v
+			end
+		end
+		end
+	end
+	--[[
+	############################################################################################
+	COMMANDS 
+	bookmark: ABCKA
+	############################################################################################
+	]]
+	addCmd("example","",function(args,speaker)
+		local target = locate(args[2])
+
+	end)
+	addCmd("instaprox","Makes proximityprompts instant",function(args,speaker)
+	    for i,v in pairs(game.Workspace:GetDescendants()) do
+		if v.ClassName == "ProximityPrompt" then
+			v.HoldDuration = 0
+		end
+	end
+	end)
+	addCmd("modify","modifiers: bullets, maxammo, allfires, fullmod",function(args,speaker)
+		local target = locateoto(args[2])
+		if target then
+			if target == "ABC" then
+				for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+					if v:FindFirstChild("ACS_Modulo") and v.Name ~= "M870" and v.Name ~= "SVD" and v.Name ~= "Double Barrel" then
+						local mods = require(v.ACS_Modulo.Variaveis.Settings)
+						local modifer = string.lower(args[3])
+						if modifer == "bullets" then mods.Bullets = args[4]end
+						if modifer == "maxammo" then mods.ammo = args[4]end
+						if modifer == "allfires" then mods.FireModes = {ChangeFiremode = true,Semi = true,Burst = true,Auto = true,Explosive = false}end
+						if modifer == "fullmod" then 
+							mods.Name = "Modded "..v.Name
+							--	mods.Bullets = 1
+							mods.MinRecoilPower = 0
+							mods.MaxRecoilPower = 0
+							mods.MaxSpread = 5
+							mods.Ammo = 50000
+							mods.FireModes = {
+								ChangeFiremode = true,
+								Semi = true,
+								Burst = true,
+								Auto = true,
+								Explosive = false
+							} end end end
+			else
+				local v = target
+				if v:FindFirstChild("ACS_Modulo") then
+					local mods = require(v.ACS_Modulo.Variaveis.Settings)
+					local modifer = string.lower(args[3])
+					if modifer == "bullets" then mods.Bullets = args[4]end
+					if modifer == "maxammo" then mods.ammo = args[4]end
+					if modifer == "allfires" then mods.FireModes = {ChangeFiremode = true,Semi = true,Burst = true,Auto = true,Explosive = false}end
+					if modifer == "fullmod" then 
+						mods.Name = "Modded "..v.Name
+						--	mods.Bullets = 1
+						mods.MinRecoilPower = 0
+						mods.MaxRecoilPower = 0
+						mods.MaxSpread = 5
+						mods.Ammo = 50000
+						mods.FireModes = {
+							ChangeFiremode = true,
+							Semi = true,
+							Burst = true,
+							Auto = true,
+							Explosive = false
+						} end end end
+
+
+		end
+
+	end)
+	addCmd("steal","steal cash",function(args,speaker)
+		local target = locate(args[2])
+		local args = { [1] = target.Name, [2] = -(args[3])} game:GetService("ReplicatedStorage").ATM.BankCheck:InvokeServer(unpack(args))
+	end)
+	addCmd("pay","pay cash",function(args,speaker)
+		local target = locate(args[2])
+		local args = { [1] = target.Name, [2] = (args[3])} game:GetService("ReplicatedStorage").ATM.BankCheck:InvokeServer(unpack(args))
+	end)
+	addCmd("dial","dials arg1",function(args,speaker)
+		local target = locate(args[2])
+		if game.Players.LocalPlayer.Backpack:FindFirstChild("PhoneTool") then
+			game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("PhoneTool"))
+		end wait(0)
+		local args = {
+			[1] = target.UserId
+		}
+		game:GetService("ReplicatedStorage").PhoneEvents.DialFunction:InvokeServer(unpack(args))
+	end)
+	addCmd("test","kills the plr",function(args, speaker)
+		if args[2] and args[2] == "true" then
+			speaker.Character.Humanoid.Jump = true
+			speaker.Character.Humanoid.Sit = true wait()
+			speaker.Character.Humanoid.Health = 0
+		end
+	end)
+	addCmd("cmds","opens cmds",function(args,speaker)
+		script.Parent.cc.Position = UDim2.new(3,0,1,0)
+		script.Parent.cc.Visible = true
+		tweenService:Create(script.Parent.cc,tweenInfo,{Position = UDim2.new(0.406,0,0.335,0)}):Play()
+	end)
+	addCmd("purchase","purchase from shops",function(args,speaker)
+		local shop = args[2]
+		if shop ~= "Doctor" or shop ~= "Weapons Dealer" or shop ~= "Melee" or shop ~= "Black Market" then spawn(function() local new = Instance.new("Hint",game.Workspace) new.Text = "The shop "..shop.." is not found!" wait(3) new:Destroy()   end) return end
+		local item = args[3]
+		local args = {
+			[1] = item,
+			[2] = shop
+		}
+		game:GetService("ReplicatedStorage").Shop.PurchaseFromShop:InvokeServer(unpack(args))
+	end)
+	addCmd("spray","pepper sprays someone",function(args,speaker)
+		local LP = game.Players.LocalPlayer
+		if not LP.Backpack:FindFirstChild("PepperSpray") and not LP.Character:FindFirstChild("PepperSpray") then
+			local args = {
+				[1] = "PepperSpray",
+				[2] = "Doctor"
+			}
+			game:GetService("ReplicatedStorage").Shop.PurchaseFromShop:InvokeServer(unpack(args))
+		end
+		local sprayer = LP.Backpack["PepperSpray"]
+		LP.Character.Humanoid:EquipTool(sprayer) wait(0)
+		local spraybox = LP.Character:FindFirstChild("PepperSpray").Spray
+		_G.Spraying = locate(args[2])
+		local spraybox = LP.Character:WaitForChild("PepperSpray").Spray
+		spraybox.Transparency = 0
+		spraybox.CanCollide = false
+		spawn(function()
+			while LP.Character:FindFirstChild("PepperSpray") do
+				wait()
+				spraybox.Position = _G.Spraying.Character.Head.Position
+			end
+		end)
+		local args = { [1] = "Button1Down" } game:GetService("Players").LocalPlayer.Character.PepperSpray.PepperSprayFunction.PepperSprayEvent:FireServer(unpack(args)) wait(0.6) local args = { [1] = "Button1Up" } game:GetService("Players").LocalPlayer.Character.PepperSpray.PepperSprayFunction.PepperSprayEvent:FireServer(unpack(args))
+		LP.Character.Humanoid:UnequipTools()
+	end)
+	addCmd("setgenguid","sets it",function(args,speaker)
+	    _G.PreGenGUID = args[2]
+	    local new = Instance.new("Hint",game.Workspace)
+				new.Text = "Set pre-gen guid. "..args[2]
+				wait(3)
+				new:Destroy()
+	end)
+	addCmd("health","manipulate another's health",function(args,speaker)
+		local method = args[4] or "izzy"
+		local target = locate(args[2])
+		if method == "izzy" then
+			if _G.PreGenGUID == nil then
+				local new = Instance.new("Hint",game.Workspace)
+				new.Text = "izzy method requires pregenguid!"
+				wait(3)
+				new:Destroy()
+			else
+				if game.Players.LocalPlayer.Backpack:FindFirstChild("Combat") then -- and not game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") then
+					game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("Combat"))
+					local args = {
+						[1] = target.Character.Humanoid,
+						[2] = args[3],
+						[3] = 0,
+						[4] = 0,
+						[5] = _G.PreGenGUID
+					}
+					game:GetService("ReplicatedStorage").ACS_Engine.Eventos.Damage:FireServer(unpack(args))
+					wait(0.2)
+					if game.Players.LocalPlayer.Character:FindFirstChild("Combat") then
+						game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
+					end
+				end
+			end
+		end
+	end)
+	addCmd("smite","Smite someone",function(args,speaker)
+		local target = locate(args[2])
+		if game.Players.LocalPlayer.Backpack:FindFirstChild("Combat") then -- and not game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") then
+    		game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("Combat"))
+			local args = {
+				[1] = target.Character.Humanoid,
+				[2] = args[3] or 500,
+				[3] = 0,
+				[4] = 0,
+				[5] = _G.PreGenGUID
+			}
+			game:GetService("ReplicatedStorage").ACS_Engine.Eventos.Damage:FireServer(unpack(args))
+			wait()
+			if game.Players.LocalPlayer.Character:FindFirstChild("Combat") then
+				game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
+			end
+		end
+	end)
+	addCmd("killall","kill everyone",function(args,speaker)
+	    for i,v in pais(game.Players:GetChildren()) do
+		if game.Players.LocalPlayer.Backpack:FindFirstChild("Combat") then -- and not game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") then
+    		game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("Combat"))
+			local args = {
+				[1] = target.Character.Humanoid,
+				[2] = 5555,
+				[3] = 0,
+				[4] = 0,
+				[5] = _G.PreGenGUID
+			}
+			game:GetService("ReplicatedStorage").ACS_Engine.Eventos.Damage:FireServer(unpack(args))
+			wait()
+			if game.Players.LocalPlayer.Character:FindFirstChild("Combat") then
+				game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
+			end
+		end
+		wait(.05)
+		end
+	end)
+	addCmd("heal","manipulate another's hp to heal",function(args,speaker)
+		local method = args[4] or "izzy"
+		local target = locate(args[2])
+		if method == "izzy" then
+			if _G.PreGenGUID == nil then
+				local new = Instance.new("Hint",game.Workspace)
+				new.Text = "izzy method requires pregenguid!"
+				wait(3)
+				new:Destroy()
+			else
+				if game.Players.LocalPlayer.Backpack:FindFirstChild("Combat") then --and not game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") then
+					game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("Combat"))
+					local args = {
+						[1] = target.Character.Humanoid,
+						[2] = -(args[3]),
+						[3] = 0,
+						[4] = 0,
+						[5] = _G.PreGenGUID
+					}
+					game:GetService("ReplicatedStorage").ACS_Engine.Eventos.Damage:FireServer(unpack(args))
+					wait(0.2)
+					if game.Players.LocalPlayer.Character:FindFirstChild("Combat") then
+						game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
+					end
+				end
+			end
+		end
+	end)
+	addCmd("status","updates arg1 status",function(args,speaker)
+		local target = locate(args[2])
+		local fileSettingsName = "shore_"..target.Name..".txt"
+		local fileSettings = isfile(fileSettingsName)
+		if not fileSettings then
+			writefile(fileSettingsName,args[3])
+		else
+			writefile(fileSettingsName,args[3])
+		end
+	end)
+	--[[
+	############################################################################################
+	COMMANDS END
+	############################################################################################
+	]]
+
+	spawn(function()
+		while wait(6) do
+			script.Parent.cred.Text = [[UNIVERSAL CO.
+	use cmds for command list
+	Keybind: ]]..keybind
+		end
+	end)
+	--local tween = tweenService:Create(Placeholder,tweenInfo,{None = What}) tween:Play()
+	_G.Spraying = plr
+	mouse.KeyDown:connect(function(k)
+		if k == keybind then
+			script.Parent.Frame.TextBox:CaptureFocus()
+			local tween = tweenService:Create(script.Parent.Frame,tweenInfo,{Position = UDim2.new(0.406,0,0.9,0)}) tween:Play()
+			wait()
+			script.Parent.Frame.TextBox.Text = ""
+		end
+	end)
+	local split=" "
+	function splitString(str,delim)
+		local broken = {}
+		if delim == nil then delim = "," end
+		for w in string.gmatch(str,"[^"..delim.."]+") do
+			table.insert(broken,w)
+		end
+		return broken
+	end
+
+	function introduceCommand(name,desc)
+		local cmdsmenu = script.Parent.cc
+		local text = cmdsmenu.exa
+		if name and desc then
+			local textb = text:Clone()
+			textb.Text = name.." - <font color='rgb(255,165,0)'>"..desc.."</font>"
+			textb.Parent = cmdsmenu.ScrollingFrame
+			textb.Visible = true
+			textb.Name = name
+			textb.x.MouseButton1Down:connect(function()
+				local tween = tweenService:Create(script.Parent.Frame,tweenInfo,{Position = UDim2.new(0.406,0,0.9,0)}) tween:Play()
+				script.Parent.Frame.TextBox.Text = name.." "
+				script.Parent.Frame.TextBox:CaptureFocus()
+			end)
+		end
+	end
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame)
+		dragToggle = nil
+		local dragSpeed = 0.50
+		dragInput = nil
+		dragStart = nil
+		local dragPos = nil
+		function updateInput(input)
+			local Delta = input.Position - dragStart
+			local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+			game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.30), {Position = Position}):Play()
+		end
+		Frame.InputBegan:Connect(function(input)
+			if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+				dragToggle = true
+				dragStart = input.Position
+				startPos = Frame.Position
+				input.Changed:Connect(function()
+					if input.UserInputState == Enum.UserInputState.End then
+						dragToggle = false
+					end
+				end)
+			end
+		end)
+		Frame.InputChanged:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+				dragInput = input
+			end
+		end)
+		game:GetService("UserInputService").InputChanged:Connect(function(input)
+			if input == dragInput and dragToggle then
+				updateInput(input)
+			end
+		end)
+	end
+
+	dragify(script.Parent.cc)
+
+	--for i,v in pairs(cmdsfolder:GetChildren()) do
+	--	if v:IsA("ModuleScript") and v.Name ~= "example" then
+	--		introduceCommand(v)
+	--	end
+	--end
+
+	function findCMD(cmd)
+		found = false
+		for i = 1, #cmds do
+			if cmds[i].Alias == cmd then
+				found = true
+				return cmds[i]
+			end
+		end
+		if not found then return false end
+	end
+
+	script.Parent.Frame.TextBox.FocusLost:connect(function()
+		local t = script.Parent.Frame.TextBox.Text
+		local args = splitString(t,split)
+		if args[1] ~= nil then
+			local cmdName = args[1]
+			local speaker = game.Players.LocalPlayer
+			script.Parent.Frame.TextBox.Text = ""
+			--require(cmdsfolder:FindFirstChild(cmdName)).Func(args,speaker)
+			--print(cmdsfolder:FindFirstChild(cmdName).Name,{args,speaker})
+			local cmd = findCMD(cmdName)
+			local tween = tweenService:Create(script.Parent.Frame,tweenInfo,{Position = UDim2.new(0.406,0,1.2,0)}) tween:Play()
+			cmd.Func(args,speaker)
+		else
+			script.Parent.Frame.TextBox.Text = "nil args!"
+			wait()
+			script.Parent.Frame.TextBox.Text = ""
+			local tween = tweenService:Create(script.Parent.Frame,tweenInfo,{Position = UDim2.new(0.406,0,1.2,0)}) tween:Play()
+		end
+	end)
+
+	for i = 1, #cmds do
+		introduceCommand(cmds[i].Alias,cmds[i].Desc)
+	end
+
+	script.Parent.cc.Searc.Changed:Connect(function()
+		for i,v in pairs(script.Parent.cc.ScrollingFrame:GetChildren()) do
+			if script.Parent.cc.Searc.Text == "" then
+				if v:IsA("TextLabel") then
+					v.Visible = true
+				end
+			else
+				if v:IsA("TextLabel") then
+					local lower = string.lower(script.Parent.cc.Searc.Text)
+					local item = string.lower(v.Name)
+					if string.find(item, lower) then
+						v.Visible = true
+					else
+						v.Visible = false
+					end
+				end
+			end
+		end
+	end)
+
+	script.Parent.cc.x.MouseButton1Down:Connect(function()
+		tweenService:Create(script.Parent.cc,tweenInfo,{Position = UDim2.new(-3,0,1,0)}):Play()
+		wait(0.5)
+		script.Parent.cc.Visible = false
+	end)
+end
+coroutine.wrap(FAQFX_fake_script)()
